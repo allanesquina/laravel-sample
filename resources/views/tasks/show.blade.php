@@ -20,5 +20,24 @@
         {!! Form::close() !!}
     </div>
 </div>
+<hr>
+<div class="container">
+    {!! Form::open([
+        'route' => 'comments.store'
+    ]) !!}
+    <div class="form-group">
+        {!! Form::label('text', 'Comment:', ['class' => 'control-label']) !!}
+        {!! Form::textarea('text', null, ['class' => 'form-control']) !!}
+        {!! Form::hidden('tasks_id', $task->id) !!}
+    </div>
+
+    {!! Form::submit('Comment', ['class' => 'btn btn-primary']) !!}
+    {!! Form::close() !!}
+<hr>
+    @foreach($comments as $comment)
+        <p>{{$comment->text}}</p>
+        <hr>
+    @endforeach
+</div>
 
 @stop

@@ -17,3 +17,4 @@ Route::get('/', [
 ]);
 
 Route::resource('tasks', 'TasksController');
+Route::resource('comments', 'CommentsController');

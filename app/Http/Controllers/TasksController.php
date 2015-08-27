@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Task;
+use App\Comment;
 use Session;
 
 class TasksController extends Controller
@@ -66,8 +67,9 @@ class TasksController extends Controller
     public function show($id)
     {
         $task = Task::findOrFail($id);
+        $comments = Comment::where('tasks_id', '=', $id)->get();
 
-        return view('tasks.show')->withTask($task);
+        return view('tasks.show', array('task'=> $task,'comments'=> $comments));
         //
     }
 
