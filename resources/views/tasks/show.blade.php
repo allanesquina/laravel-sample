@@ -7,8 +7,14 @@
 
     <div class="actions">
             <a href="{{ route('tasks.edit', $task->id) }}" class="pure-button button-primary"><i class="fa fa-trash-o"></i> Edit Task</a>
-            <a class="pure-button button-error" type="submit" onclick="$('#form-delete').submit();"><i class="fa fa-trash-o"></i> Delete this task?</a>
+            <a class="pure-button button-error" type="submit" onclick="App.home.delete();"><i class="fa fa-trash-o"></i> Delete this task?</a>
     </div>
+        {!! Form::open([
+            'method' => 'DELETE',
+            'route' => ['tasks.destroy', $task->id],
+            'id' => 'form-delete'
+        ]) !!}
+        {!! Form::close() !!}
 <hr>
 <div class="container">
     <h2>Comments <i class="fa fa-comment-o"></i></h2>

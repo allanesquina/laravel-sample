@@ -4,11 +4,13 @@
 <hr>
 @foreach($tasks as $task)
 <div class="list-group">
-  <div href="#" class="list-group-item">
-    <h4 class="list-group-item-heading">{{ $task->title }}</h4>
-    <p>
-        {{$task->description}}
-    </p>
+  <div href="#" class="">
+    <a class="item-text" href="{{ route('tasks.show', $task->id) }}">
+    <h4>{{ $task->title }}</h4>
+        <p>
+            {{$task->description}}
+        </p>
+    </a>
     <hr>
     <div class="actions">
         <a href="{{ route('tasks.show', $task->id) }}" class="btn btn-info"><i class="fa fa-search-plus"></i></i></a>

@@ -11,19 +11,23 @@
 |
 */
 
-Route::get('/', [
-    'as' => 'home',
-    'uses' => 'PagesController@home'
-]);
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/', [
+        'as' => 'home',
+        'uses' => 'PagesController@home'
+    ]);
 
-Route::resource('tasks', 'TasksController');
-Route::resource('comments', 'CommentsController');
+    Route::resource('tasks', 'TasksController');
+    Route::resource('comments', 'CommentsController');
+
+    // Authentication routes...
+    Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+    // Registration routes...
+    Route::get('auth/register', 'Auth\AuthController@getRegister');
+    Route::post('auth/register', 'Auth\AuthController@postRegister');
+});
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
-Route::get('auth/logout', 'Auth\AuthController@getLogout');
-
-// Registration routes...
-Route::get('auth/register', 'Auth\AuthController@getRegister');
-Route::post('auth/register', 'Auth\AuthController@postRegister');

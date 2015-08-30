@@ -62,6 +62,11 @@ App.home = (function (window, document) {
             .done(function(res) {
                 $('.container').addClass('active').html(res);
             });
+        },
+        delete: function () {
+            if(confirm('Do you want to delete this task?')) {
+                $('#form-delete').submit();
+            }
         }
     }
 }(window, document));
