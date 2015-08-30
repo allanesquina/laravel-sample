@@ -2,11 +2,9 @@
 
 @section('content')
 
-<h1>Welcome Home</h1>
-<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, possimus, ullam? Deleniti dicta eaque facere, facilis in inventore mollitia officiis porro totam voluptatibus! Adipisci autem cumque enim explicabo, iusto sequi.</p>
+<h1>Welcome to the Task Manager</h1>
+<p class="lead">Feel free to create your tasks and comment it.</p>
 <hr>
 
-<a href="{{ route('tasks.index') }}" class="btn btn-info">View Tasks</a>
-<a href="{{ route('tasks.create') }}" class="btn btn-primary">Add New Task</a>
 
 @stop

@@ -70,7 +70,7 @@
                 @endif
                 @if (Auth::check())
                 <div class="pure-menu pure-menu-horizontal">
-                    <a href="#" class="pure-menu-heading pure-menu-link">TASK MANAGER</a>
+                    <a href="/" class="pure-menu-heading pure-menu-link">TASK MANAGER</a>
                     <ul class="pure-menu-list">
                         <li class="pure-menu-item"><a href="/tasks" class="pure-menu-link"><i class="fa fa-list"></i> List</a></li>
                         <li class="pure-menu-item"><a href="/tasks/create" class="pure-menu-link"><i class="fa fa-plus"></i> Add task</a></li>
