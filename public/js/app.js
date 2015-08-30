@@ -28,7 +28,8 @@ App.Login = (function (window, document) {
                     $form.addClass('ok');
                     $state.html('Welcome back!');
                     $form.fadeOut(1000, function () {
-                       App.home.page('/tasks');
+                    //    App.home.page('/tasks');
+                        window.location.href = '/tasks';
                     });
                 } else {
                     $state.html('Log in');

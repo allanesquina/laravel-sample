@@ -7,20 +7,17 @@
 <hr>
 {!! Form::model($task, [
     'method' => 'PATCH',
-    'route' => ['tasks.update', $task->id]
+    'route' => ['tasks.update', $task->id],
+    'class' => 'pure-form pure-form-stacked'
 ]) !!}
-
-<div class="form-group">
+<fieldset>
     {!! Form::label('title', 'Title:', ['class' => 'control-label']) !!}
     {!! Form::text('title', null, ['class' => 'form-control']) !!}
-</div>
 
-<div class="form-group">
     {!! Form::label('description', 'Description:', ['class' => 'control-label']) !!}
     {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
-</div>
 
-{!! Form::submit('Update Task', ['class' => 'btn btn-primary']) !!}
-
+{!! Form::submit('Update Task', ['class' => 'pure-button pure-button-primary']) !!}
+</fieldset>
 {!! Form::close() !!}
 @stop

@@ -7,20 +7,19 @@
 <hr>
 @include('partials.alerts.errors')
 {!! Form::open([
-    'route' => 'tasks.store'
+    'route' => 'tasks.store',
+    'class' => 'pure-form pure-form-stacked'
 ]) !!}
 
-<div class="form-group">
+<fieldset>
     {!! Form::label('title', 'Title:', ['class' => 'control-label']) !!}
     {!! Form::text('title', null, ['class' => 'form-control']) !!}
-</div>
 
-<div class="form-group">
     {!! Form::label('description', 'Description:', ['class' => 'control-label']) !!}
     {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
-</div>
 
-{!! Form::submit('Create New Task', ['class' => 'btn btn-primary']) !!}
+{!! Form::submit('Create New Task', ['class' => 'pure-button pure-button-primary']) !!}
+</fieldset>
 
 {!! Form::close() !!}
 @stop

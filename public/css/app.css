@@ -1,3 +1,8 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #666;
+  line-height: 1.6; }
+
 @-webkit-keyframes spinner {
   0% {
     -webkit-transform: rotateZ(0deg);
@@ -157,5 +162,50 @@ footer {
 
 .container {
   transition: .2s; }
+
+.list-group {
+  transition: .2s;
+  background: #FBFBFB;
+  border: 1px solid #B4B4B4;
+  border-bottom: 1px solid #93989C;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 2px #C0C0C0;
+  padding: 20px;
+  border-left: 4px solid #8B489B; }
+  .list-group:hover {
+    background: #fff; }
+
+.txt-comment {
+  height: 100px; }
+
+.actions {
+  text-align: right; }
+  .actions i {
+    font-size: 20px !important;
+    color: #555;
+    margin: 5px 5px; }
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+  color: white;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
+
+.button-success {
+  background: #1cb841;
+  /* this is a green */ }
+
+.button-error {
+  background: #ca3c3c;
+  /* this is a maroon */ }
+
+.button-warning {
+  background: #df7514;
+  /* this is an orange */ }
+
+.button-secondary {
+  background: #42b8dd;
+  /* this is a light blue */ }
 
 /*# sourceMappingURL=app.css.map */

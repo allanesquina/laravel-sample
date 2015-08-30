@@ -63,7 +63,7 @@ class TasksController extends Controller
 
         Session::flash('flash_message', 'Task successfully added!');
 
-        return redirect()->back();
+        return redirect()->route('tasks.index');
         //
     }
 
@@ -117,7 +117,7 @@ class TasksController extends Controller
 
         Session::flash('flash_message', 'Task successfully added!');
 
-        return redirect()->back();
+        return redirect()->route('tasks.index');
     }
 
     /**

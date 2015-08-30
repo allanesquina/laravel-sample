@@ -8,9 +8,13 @@
     <h4 class="list-group-item-heading">{{ $task->title }}</h4>
     <p>
         {{$task->description}}
-        <a href="{{ route('tasks.show', $task->id) }}" class="btn btn-info">View Task</a>
-        <a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-primary">Edit Task</a>
     </p>
+    <hr>
+    <div class="actions">
+        <a href="{{ route('tasks.show', $task->id) }}" class="btn btn-info"><i class="fa fa-search-plus"></i></i></a>
+        <a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-primary"><i class="fa fa-pencil-square-o"></i></a>
+        <i class="fa fa-comment-o"></i>
+    </div>
 </div>
 </div>
 @endforeach

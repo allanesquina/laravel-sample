@@ -3,12 +3,13 @@
 $primary: #4D85D1;
 
 body {
-  // font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   // height: 100vh;
   // // background: url("http://i.imgur.com/HgflTDf.jpg") 50% fixed;
   // background-size: cover;
   // background: #3C3C3C;
-  // color:#ccc;
+  color:#666;
+  line-height: 1.6;
 }
 
 @keyframes spinner {
@@ -189,4 +190,53 @@ footer {
 .container {
     transition:.2s;
     // visibility: hidden;
+}
+.list-group {
+    transition: .2s;
+    background: #FBFBFB;
+    border: 1px solid #B4B4B4;
+    border-bottom: 1px solid #93989C;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 2px #C0C0C0;
+    padding:20px;
+    border-left: 4px solid #8B489B;
+    &:hover {
+        background: #fff;
+    }
+}
+.txt-comment {
+    height: 100px;
+}
+.actions {
+    text-align: right;
+    i {
+        font-size: 20px !important;
+        color:#555;
+        margin:5px 5px;
+    }
+}
+// Pure buttons
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+    color: white;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-success {
+    background: rgb(28, 184, 65); /* this is a green */
+}
+
+.button-error {
+    background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.button-warning {
+    background: rgb(223, 117, 20); /* this is an orange */
+}
+
+.button-secondary {
+    background: rgb(66, 184, 221); /* this is a light blue */
 }
