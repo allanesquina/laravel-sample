@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use Validator;
+use URL;
+use Auth;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -46,6 +49,36 @@ class AuthController extends Controller
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
         ]);
+    }
+
+
+    public function getLogout()
+    {
+            Auth::logout();
+    }
+
+    public function postLogin(Request $request)
+    {
+        // return User::create([
+        //     'name' => 'Allan',
+        //     'email' => 'admin@admin.com',
+        //     'password' => bcrypt('admin'),
+        // ]);
+
+        $auth = false;
+
+        if ($request->ajax()) {
+            if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+                $auth = true;
+            }
+            return response()->json([
+                'auth' => $auth,
+                'intended' => URL::previous(),
+                'res' => $request->email
+            ]);
+        } else {
+            return redirect()->intended(URL::route('home'));
+        }
     }
 
     /**

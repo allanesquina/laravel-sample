@@ -17,11 +17,20 @@ class TasksController extends Controller
      *
      * @return Response
      */
-    public function index()
+    public function index(Request $request)
     {
 
         $tasks = Task::all();
-        return view('tasks.index')->withTasks($tasks);
+
+        $data = array(
+            "tasks"=> $tasks
+        );
+
+        if ($request->ajax()) {
+            return view('tasks.ajax.index', $data);
+        }
+
+        return view('tasks.index', $data);
     }
 
     /**
