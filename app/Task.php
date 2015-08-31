@@ -15,4 +15,8 @@ class Task extends Model
         'title',
         'description'
     ];
+    public function comments()
+    {
+        return $this->hasMany('App\Comment', 'tasks_id');
+    }
 }

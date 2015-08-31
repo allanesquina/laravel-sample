@@ -18,7 +18,7 @@
     <div class="actions">
         <a href="{{ route('tasks.show', $task->id) }}" class="btn btn-info"><i class="fa fa-search-plus"></i></i></a>
         <a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-primary"><i class="fa fa-pencil-square-o"></i></a>
-        <i class="fa fa-comment-o"></i>
+        <i class="fa fa-comment-o"></i>{{$task->comments()->count()}}
     </div>
 </div>
 </div>
