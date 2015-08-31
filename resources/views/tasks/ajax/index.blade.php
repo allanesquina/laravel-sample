@@ -1,12 +1,15 @@
 
 <h1>Task List</h1>
-<p class="lead">Here's a list of all your tasks. <a href="/tasks/create">Add a new one?</a></p>
+<p class="lead">Here's a list of all your tasks.</p>
 <hr>
 @foreach($tasks as $task)
 <div class="list-group">
   <div href="#" class="">
     <a class="item-text" href="{{ route('tasks.show', $task->id) }}">
     <h4>{{ $task->title }}</h4>
+    <span class="date">
+        <i class="fa fa-calendar-o"></i> Created on: {{ date('F d, Y', strtotime($task->created_at)) }} <br />
+    </span>
         <p>
             {{$task->description}}
         </p>
@@ -20,3 +23,5 @@
 </div>
 </div>
 @endforeach
+
+<?php echo $tasks->render() ?>

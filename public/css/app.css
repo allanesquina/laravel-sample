@@ -163,6 +163,12 @@ footer {
 .container {
   transition: .2s; }
 
+.content {
+  padding-top: 5px; }
+
+.date {
+  font-size: 12px; }
+
 .list-group {
   transition: .2s;
   background: #FBFBFB;
@@ -209,5 +215,46 @@ footer {
 .button-secondary {
   background: #42b8dd;
   /* this is a light blue */ }
+
+.pagination {
+  text-align: center; }
+  .pagination ul {
+    list-style: none; }
+  .pagination li {
+    margin: 2px 5px;
+    display: inline-block; }
+
+.alert {
+  border: 1px solid #ccc;
+  padding: 5px 15px;
+  font-weight: bold; }
+
+.alert-danger {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc; }
+
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6; }
+
+.button-error i {
+  color: #fff; }
+
+.user-nav {
+  text-align: right;
+  height: 50px;
+  margin-bottom: 15px; }
+  .user-nav ul {
+    list-style: none; }
+  .user-nav li {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    float: right;
+    margin: 2px 5px; }
+  .user-nav a {
+    margin: 2px 5px; }
 
 /*# sourceMappingURL=app.css.map */

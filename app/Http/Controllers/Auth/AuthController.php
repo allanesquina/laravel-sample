@@ -55,13 +55,14 @@ class AuthController extends Controller
     public function getLogout()
     {
             Auth::logout();
+            return redirect()->route('home');
     }
 
     public function postLogin(Request $request)
     {
         // return User::create([
-        //     'name' => 'Allan',
-        //     'email' => 'admin@admin.com',
+        //     'name' => 'Allan Esquina',
+        //     'email' => 'allan.esquina@gmail.com',
         //     'password' => bcrypt('admin'),
         // ]);
 

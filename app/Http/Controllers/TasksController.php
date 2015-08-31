@@ -20,7 +20,7 @@ class TasksController extends Controller
     public function index(Request $request)
     {
 
-        $tasks = Task::all();
+        $tasks = Task::paginate(10);
 
         $data = array(
             "tasks"=> $tasks
